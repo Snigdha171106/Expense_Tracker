@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>💸 Expense Tracker</h1>
+
+    <button onclick="toggleDarkMode()">🌙 Toggle Dark Mode</button>
+
+    <div class="form">
+        <input type="text" id="title" placeholder="Expense name">
+        <input type="number" id="amount" placeholder="Amount">
+        <input type="month" id="month">
+        <select id="category">
+            <option value="Food">🍔 Food</option>
+            <option value="Travel">🚌 Travel</option>
+            <option value="Shopping">🛍️ Shopping</option>
+            <option value="Bills">💡 Bills</option>
+        </select>
+        <button onclick="addExpense()">Add Expense</button>
+    </div>
+
+    <input type="number" id="limit" placeholder="Set Monthly Limit">
+    <button onclick="setLimit()">Set Limit</button>
+
+    <input type="text" id="search" placeholder="Search expense" onkeyup="displayExpenses()">
+
+    <button onclick="sortExpenses()">Sort by Amount ↓</button>
+
+    <h2>Total: ₹<span id="total">0</span></h2>
+
+    <h3>Category Totals</h3>
+    <ul id="categoryTotals"></ul>
+
+    <h3>Expenses</h3>
+    <ul id="expenseList"></ul>
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
